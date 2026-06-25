@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Quiz Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div id="welcome-box">
+            <h2>Welcome to Premium Quiz Game!</h2>
+            <p class="welcome-text">Test your logic and performance matrix across 20 challenging questions.</p>
+            
+            <div class="rules-box">
+                <p>📋 <strong>Total Questions:</strong> 20</p>
+                <p>⏱️ <strong>Format:</strong> Multiple Choice (MCQs)</p>
+                <p>⚙️ <strong>Logic Source:</strong> Replicated from C++ Core Logic</p>
+                <p>📌 <strong>Rule:</strong> Select an option and click submit to proceed.</p>
+            </div>
+            
+            <button class="action-btn start-btn" onclick="startQuiz()">Start Quiz Game</button>
+        </div>
+
+        <div id="quiz-box" style="display: none;">
+            <div class="header">
+                <h1>Quiz Dashboard</h1>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="question-section">
+                <p class="question-text" id="question-text">Loading question...</p>
+                <div class="options-list" id="options-container">
+                    </div>
+            </div>
+
+            <div class="footer">
+                <button class="action-btn" id="next-btn" onclick="submitAnswer()">Submit Answer</button>
+            </div>
+        </div>
+
+        <div id="result-box" class="result-screen">
+            <h2>Quiz Completed!</h2>
+            <p class="score-text" id="final-score">You scored 0 out of 20</p>
+            <p class="percentage" id="final-percentage">0% Matrix Performance</p>
+            <button class="action-btn" onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

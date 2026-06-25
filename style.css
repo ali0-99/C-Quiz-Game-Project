@@ -1,0 +1,196 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #3b82f6;
+    --accent-hover: #1d4ed8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+/* Welcome Screen Styling (Naya Addition) */
+#welcome-box {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#welcome-box h2 {
+    font-size: 26px;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.welcome-text {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.rules-box {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.rules-box p {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.rules-box p:last-child {
+    margin-bottom: 0;
+}
+
+.start-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Quiz Header & Body */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    text-transform: uppercase;
+}
+
+.progress-container {
+    background-color: #334155;
+    border-radius: 8px;
+    height: 8px;
+    width: 100%;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--accent-color);
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.question-section {
+    margin-bottom: 25px;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    background-color: #1e293b;
+    color: var(--text-main);
+    border: 2px solid #475569;
+    padding: 14px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.option-btn:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.option-btn.selected {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.action-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.result-screen {
+    text-align: center;
+    display: none;
+}
+
+.result-screen h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: var(--success);
+}
+
+.score-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.percentage {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
